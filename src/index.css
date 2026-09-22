@@ -1,0 +1,1961 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap");
+
+:root {
+    font-family: "Manrope", sans-serif;
+    color: #151515;
+    background: #0d0d0d;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: #0d0d0d;
+    color: #151515;
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* =========================================================
+   FIXED MENU
+========================================================= */
+
+.fixed-menu {
+    position: fixed;
+    top: 32px;
+    right: 38px;
+    z-index: 100;
+    color: #f4f0ea;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    mix-blend-mode: difference;
+    transition: color 0.4s ease;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    height: 150vh;
+    min-height: 900px;
+    background: #0d0d0d;
+    color: #f4f0ea;
+    overflow: hidden;
+}
+
+.hero-nav {
+    position: absolute;
+    top: 30px;
+    left: 38px;
+    right: 38px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(244, 240, 234, 0.45);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+    letter-spacing: -0.05em;
+}
+
+.nav-name {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+}
+
+.hero-content {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-label {
+    position: absolute;
+    top: 31%;
+    left: 7vw;
+    z-index: 5;
+    font-size: 9px;
+    letter-spacing: 0.34em;
+    color: rgba(244, 240, 234, 0.62);
+}
+
+.hero-title {
+    position: absolute;
+    z-index: 4;
+    top: 38%;
+    left: 7vw;
+    display: flex;
+    flex-direction: column;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(100px, 14vw, 220px);
+    font-weight: 300;
+    line-height: 0.72;
+    letter-spacing: -0.065em;
+    color: #f4f0ea;
+    pointer-events: none;
+}
+
+    .hero-title span {
+        margin-left: 11vw;
+        color: #d8d0c5;
+        font-style: italic;
+    }
+
+.hero-image-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 43vw;
+    height: 67vh;
+    min-height: 500px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 3;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 180deg, rgba(13, 13, 13, 0.05), rgba(13, 13, 13, 0.18) ), url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1600&q=90");
+    background-size: cover;
+    background-position: center 25%;
+}
+
+.hero-bottom {
+    position: absolute;
+    left: 38px;
+    right: 38px;
+    bottom: 35px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8px;
+    letter-spacing: 0.25em;
+    color: rgba(244, 240, 234, 0.5);
+}
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+    .scroll-indicator span {
+        font-size: 15px;
+        opacity: 0.8;
+    }
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro {
+    position: relative;
+    min-height: 115vh;
+    background: #e9e3da;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: center;
+    padding: 130px 8vw;
+    overflow: hidden;
+}
+
+.intro-image {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.intro-image-inner {
+    width: 100%;
+    height: 115%;
+    background-image: url("/images/intro-face.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.intro-content {
+    position: relative;
+    padding-left: 10vw;
+    padding-bottom: 5vh;
+}
+
+.intro-label {
+    margin-bottom: 55px;
+    font-size: 9px;
+    letter-spacing: 0.34em;
+    opacity: 0.45;
+}
+
+.intro h2 {
+    display: flex;
+    flex-direction: column;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(75px, 9vw, 150px);
+    font-weight: 300;
+    line-height: 0.75;
+    letter-spacing: -0.06em;
+    color: #151515;
+}
+
+    .intro h2 span {
+        margin-left: 5vw;
+        font-style: italic;
+        color: #ffffff;
+    }
+
+.intro-description {
+    max-width: 340px;
+    margin-top: 70px;
+    margin-left: 5vw;
+    font-size: 11px;
+    line-height: 2;
+    color: rgba(21, 21, 21, 0.55);
+}
+
+.intro-number {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 130px;
+    font-weight: 300;
+    color: rgba(21, 21, 21, 0.08);
+}
+
+/* =========================================================
+   PROCEDURES
+========================================================= */
+
+.procedures {
+    position: relative;
+    min-height: 130vh;
+    padding: 170px 8vw 130px;
+    background: #0d0d0d;
+    color: #f4f0ea;
+    overflow: hidden;
+}
+
+.procedures-heading {
+    position: relative;
+    z-index: 5;
+}
+
+.procedures-label {
+    margin-bottom: 50px;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    color: rgba(244, 240, 234, 0.45);
+}
+
+.procedures-heading h2 {
+    display: flex;
+    flex-direction: column;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(90px, 12vw, 180px);
+    font-weight: 300;
+    line-height: 0.7;
+    letter-spacing: -0.06em;
+    color: #f4f0ea;
+}
+
+    .procedures-heading h2 span {
+        margin-left: 13vw;
+        color: #ffffff;
+        font-style: italic;
+    }
+
+.procedure-image {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    width: 43vw;
+    height: 62vh;
+    min-height: 500px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.procedure-image-item {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.8s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+    .procedure-image-item.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+.procedures-list {
+    position: relative;
+    z-index: 6;
+    width: 54%;
+    margin-top: 130px;
+    margin-left: auto;
+}
+
+.procedure-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 60px 1fr 40px;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(244, 240, 234, 0.18);
+    transition: color 0.5s ease, border-color 0.5s ease;
+}
+
+    .procedure-item:last-child {
+        border-bottom: 1px solid rgba(244, 240, 234, 0.18);
+    }
+
+.procedure-number {
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    color: rgba(244, 240, 234, 0.35);
+}
+
+.procedure-main h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(35px, 4vw, 65px);
+    font-weight: 300;
+    letter-spacing: -0.035em;
+    line-height: 0.9;
+}
+
+.procedure-main p {
+    max-width: 280px;
+    margin-top: 14px;
+    font-size: 9px;
+    line-height: 1.8;
+    color: rgba(244, 240, 234, 0.38);
+    transition: color 0.4s ease;
+}
+
+.procedure-arrow {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(244, 240, 234, 0.4);
+    transition: transform 0.5s ease, color 0.4s ease;
+}
+
+.procedure-item:hover {
+    border-color: rgba(244, 240, 234, 0.45);
+}
+
+    .procedure-item:hover .procedure-main p {
+        color: rgba(244, 240, 234, 0.7);
+    }
+
+    .procedure-item:hover .procedure-arrow {
+        transform: translate(5px, -5px);
+        color: #f4f0ea;
+    }
+
+.procedure-item.active .procedure-main h3 {
+    color: #f4f0ea;
+}
+
+.procedures-footer {
+    position: absolute;
+    left: 8vw;
+    right: 8vw;
+    bottom: 55px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    color: rgba(244, 240, 234, 0.35);
+}
+
+/* =========================================================
+   FEATURED WORK
+========================================================= */
+
+.featured-work {
+    position: relative;
+    min-height: 100vh;
+    padding: 170px 8vw 140px;
+    background: #e9e3da;
+    color: #151515;
+    overflow: hidden;
+}
+
+.featured-heading {
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+}
+
+.featured-label {
+    margin-bottom: 55px;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    opacity: 0.45;
+}
+
+.featured-heading h2 {
+    display: flex;
+    flex-direction: column;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(90px, 12vw, 180px);
+    font-weight: 300;
+    line-height: 0.7;
+    letter-spacing: -0.06em;
+    color: #151515;
+}
+
+    .featured-heading h2 span {
+        margin-left: 13vw;
+        font-style: italic;
+        color: #ffffff;
+    }
+
+.featured-items {
+    position: relative;
+    margin-top: 150px;
+}
+
+.featured-item {
+    position: relative;
+    min-height: 760px;
+    margin-bottom: 220px;
+    display: block;
+}
+
+    .featured-item:last-child {
+        margin-bottom: 0;
+    }
+
+.featured-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    color: rgba(21, 21, 21, 0.4);
+}
+
+.featured-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 55%;
+    height: 76vh;
+    min-height: 560px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.featured-image-inner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featured-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 13, 13, 0.03);
+    pointer-events: none;
+}
+
+.featured-image-caption {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2;
+    font-size: 7px;
+    letter-spacing: 0.3em;
+    color: rgba(244, 240, 234, 0.8);
+}
+
+.featured-item:hover .featured-image-inner {
+    transform: scale(1.04);
+}
+
+.featured-content {
+    position: absolute;
+    left: 0;
+    bottom: 110px;
+    z-index: 4;
+    max-width: 300px;
+}
+
+.featured-category {
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    color: rgba(21, 21, 21, 0.45);
+}
+
+.featured-content h3 {
+    margin-top: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(55px, 6vw, 90px);
+    font-weight: 300;
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    color: #151515;
+    opacity: 1;
+}
+
+.featured-description {
+    max-width: 240px;
+    margin-top: 25px;
+    font-size: 9px;
+    line-height: 1.9;
+    color: rgba(21, 21, 21, 0.5);
+}
+
+.featured-line {
+    width: 100%;
+    height: 1px;
+    margin-top: 25px;
+    background: rgba(21, 21, 21, 0.2);
+}
+
+.featured-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    font-size: 8px;
+    letter-spacing: 0.25em;
+    color: #151515;
+}
+
+    .featured-link span {
+        font-size: 15px;
+        transition: transform 0.4s ease;
+    }
+
+.featured-content:hover .featured-link span {
+    transform: translate(5px, -5px);
+}
+
+.featured-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    color: rgba(21, 21, 21, 0.4);
+}
+
+/* =========================================================
+   BEFORE / AFTER
+========================================================= */
+
+.before-after {
+    position: relative;
+    min-height: 130vh;
+    padding: 170px 8vw 120px;
+    background: #151515;
+    color: #f4f0ea;
+    overflow: hidden;
+}
+
+.before-after-header {
+    position: relative;
+    z-index: 4;
+    max-width: 1000px;
+}
+
+.before-after-label {
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    opacity: 0.45;
+    margin-bottom: 55px;
+}
+
+.before-after-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(90px, 12vw, 185px);
+    font-weight: 300;
+    line-height: 0.7;
+    letter-spacing: -0.055em;
+    display: flex;
+    flex-direction: column;
+    color: #f4f0ea;
+}
+
+    .before-after-title span {
+        margin-left: 13vw;
+        font-style: italic;
+        color: #ffffff;
+    }
+
+.before-after-intro {
+    max-width: 280px;
+    margin-top: 55px;
+    margin-left: 13vw;
+    font-size: 11px;
+    line-height: 1.9;
+    color: rgba(244, 240, 234, 0.5);
+}
+
+.before-after-stage {
+    position: relative;
+    z-index: 3;
+    width: 72vw;
+    height: 76vh;
+    min-height: 600px;
+    margin: 120px auto 0;
+}
+
+.before-after-image {
+    position: relative;
+    width: min(78vw, 1100px);
+    height: min(68vh, 760px);
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: ew-resize;
+    user-select: none;
+    touch-action: none;
+    background: #151515;
+}
+
+    .before-after-image > img,
+    .before-after-before img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+
+.before-after-after-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.before-after-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+    .before-after-before img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        max-width: none;
+    }
+
+.before-after-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #f4f0ea;
+    z-index: 5;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.before-after-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 54px;
+    height: 54px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #f4f0ea;
+    border-radius: 50%;
+    background: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #f4f0ea;
+    font-size: 14px;
+}
+
+.before-after-image:hover .before-after-handle {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: rgba(21, 21, 21, 0.6);
+}
+
+.before-after-label-before,
+.before-after-label-after {
+    position: absolute;
+    top: 25px;
+    z-index: 6;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    color: #f4f0ea;
+    pointer-events: none;
+}
+
+.before-after-label-before {
+    left: 25px;
+}
+
+.before-after-label-after {
+    right: 25px;
+}
+
+.before-after-info {
+    width: 72vw;
+    margin: 30px auto 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+    .before-after-info > div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .before-after-info span {
+        font-size: 7px;
+        letter-spacing: 0.3em;
+        opacity: 0.4;
+    }
+
+    .before-after-info strong {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+    }
+
+.before-after-instruction {
+    font-size: 8px !important;
+    letter-spacing: 0.25em !important;
+    opacity: 0.4;
+}
+
+.before-after-selector {
+    width: 72vw;
+    margin: 70px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(244, 240, 234, 0.18);
+}
+
+    .before-after-selector button {
+        position: relative;
+        padding: 22px 28px;
+        color: rgba(244, 240, 234, 0.4);
+        font-size: 8px;
+        letter-spacing: 0.2em;
+        border-bottom: 1px solid rgba(244, 240, 234, 0.18);
+        transition: color 0.4s ease, background 0.4s ease;
+    }
+
+        .before-after-selector button span {
+            margin-right: 12px;
+            opacity: 0.5;
+        }
+
+        .before-after-selector button:hover,
+        .before-after-selector button.active {
+            color: #f4f0ea;
+            background: rgba(244, 240, 234, 0.05);
+        }
+
+            .before-after-selector button.active::after {
+                content: "";
+                position: absolute;
+                left: 28px;
+                right: 28px;
+                bottom: -1px;
+                height: 1px;
+                background: #f4f0ea;
+            }
+
+/* =========================================================
+   SURGEON
+========================================================= */
+
+.surgeon {
+    position: relative;
+    min-height: 100vh;
+    padding: 120px 7vw;
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 9vw;
+    align-items: center;
+    background: #e9e3da;
+    color: #151515;
+    overflow: hidden;
+}
+
+.surgeon-image {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    overflow: hidden;
+}
+
+    .surgeon-image img {
+        display: block;
+        width: 100%;
+        height: 110%;
+        object-fit: cover;
+        object-position: center;
+        will-change: transform;
+    }
+
+.surgeon-image-number {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    z-index: 5;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: #f4f0ea;
+}
+
+.surgeon-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    color: #151515;
+}
+
+.surgeon-label {
+    margin: 0 0 35px;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: #77716a;
+}
+
+.surgeon-content h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(80px, 10vw, 170px);
+    font-weight: 300;
+    line-height: 0.72;
+    letter-spacing: -0.05em;
+    color: #151515;
+}
+
+    .surgeon-content h2 span {
+        display: block;
+        margin-left: 0.8em;
+        color: #77716a;
+    }
+
+.surgeon-quote {
+    max-width: 480px;
+    margin: 75px 0 35px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(26px, 2.4vw, 38px);
+    line-height: 1.15;
+    font-style: italic;
+    color: #151515;
+}
+
+.surgeon-description {
+    max-width: 390px;
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #68625b;
+}
+
+.surgeon-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(21, 21, 21, 0.2);
+    font-family: "Manrope", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: #77716a;
+}
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+.testimonials {
+    position: relative;
+    min-height: 100vh;
+    padding: 150px 7vw 70px;
+    background: #e9e3da;
+    color: #151515;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials-mark {
+    position: absolute;
+    top: 35px;
+    right: 6vw;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(180px, 25vw, 420px);
+    line-height: 0.7;
+    font-weight: 300;
+    color: rgba(21, 21, 21, 0.055);
+    pointer-events: none;
+    user-select: none;
+}
+
+.testimonials-header {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.testimonials-label {
+    margin: 0 0 35px;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    font-weight: 600;
+    color: #151515;
+}
+
+.testimonials-heading {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(70px, 9vw, 150px);
+    line-height: 0.78;
+    font-weight: 300;
+    letter-spacing: -0.045em;
+    color: #151515;
+}
+
+    .testimonials-heading span {
+        display: block;
+        margin-left: 12vw;
+        color: #77716a;
+    }
+
+.testimonials-main {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 5vw;
+    align-items: center;
+    margin-top: 90px;
+    margin-left: 8vw;
+}
+
+.testimonials-number {
+    align-self: start;
+    padding-top: 10px;
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(21, 21, 21, 0.5);
+}
+
+.testimonials-quote {
+    max-width: 950px;
+}
+
+    .testimonials-quote h3 {
+        margin: 0;
+        max-width: 950px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(42px, 5vw, 78px);
+        line-height: 1.02;
+        font-weight: 300;
+        letter-spacing: -0.025em;
+        color: #151515;
+    }
+
+.testimonials-details {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 850px;
+    margin-top: 65px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(21, 21, 21, 0.2);
+}
+
+.testimonial-person {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.testimonial-initials {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(21, 21, 21, 0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: #151515;
+}
+
+.testimonial-person div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.testimonial-person strong {
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: #151515;
+}
+
+.testimonial-person div span {
+    font-family: "Manrope", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: rgba(21, 21, 21, 0.5);
+}
+
+.testimonial-procedure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+    .testimonial-procedure span {
+        font-family: "Manrope", sans-serif;
+        font-size: 8px;
+        letter-spacing: 0.22em;
+        color: rgba(21, 21, 21, 0.45);
+    }
+
+    .testimonial-procedure strong {
+        font-family: "Manrope", sans-serif;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        font-weight: 600;
+        color: #151515;
+    }
+
+.testimonials-selector {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 100px;
+    margin-left: 8vw;
+    max-width: 900px;
+}
+
+.testimonials-selector-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(21, 21, 21, 0.18);
+}
+
+.testimonial-selector {
+    position: relative;
+    border: 0;
+    background: transparent;
+    padding: 22px 25px 10px 0;
+    text-align: left;
+    cursor: pointer;
+    color: #151515;
+    font-family: "Manrope", sans-serif;
+    opacity: 0.42;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+    .testimonial-selector:hover,
+    .testimonial-selector.active {
+        opacity: 1;
+    }
+
+    .testimonial-selector.active {
+        transform: translateY(-3px);
+    }
+
+    .testimonial-selector::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #151515;
+        transition: width 0.5s ease;
+    }
+
+    .testimonial-selector.active::before {
+        width: 55px;
+    }
+
+    .testimonial-selector > span {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        color: #151515;
+    }
+
+    .testimonial-selector > div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .testimonial-selector strong {
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        font-weight: 600;
+        color: #151515;
+    }
+
+    .testimonial-selector small {
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        color: rgba(21, 21, 21, 0.5);
+    }
+
+.testimonials-footer {
+    position: relative;
+    z-index: 3;
+    margin-top: 55px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(21, 21, 21, 0.14);
+    display: flex;
+    justify-content: space-between;
+    font-family: "Manrope", sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    color: rgba(21, 21, 21, 0.48);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-title {
+        font-size: 13vw;
+    }
+
+    .hero-image-wrapper {
+        width: 48vw;
+    }
+
+    .intro {
+        grid-template-columns: 45% 55%;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .intro-content {
+        padding-left: 7vw;
+    }
+
+    .procedures {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .procedure-image {
+        width: 48vw;
+    }
+
+    .procedures-list {
+        width: 58%;
+    }
+
+    .featured-work {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .before-after {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .testimonials {
+        padding: 120px 6vw 60px;
+    }
+
+    .testimonials-main {
+        margin-left: 4vw;
+        grid-template-columns: 60px 1fr;
+        gap: 4vw;
+    }
+
+    .testimonials-selector {
+        margin-left: 4vw;
+    }
+}
+
+/* =========================================================
+   SURGEON — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .surgeon {
+        min-height: auto;
+        padding: 100px 25px;
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .surgeon-image {
+        height: 65vh;
+    }
+
+    .surgeon-content {
+        max-width: none;
+    }
+
+        .surgeon-content h2 {
+            font-size: clamp(70px, 20vw, 130px);
+        }
+
+    .surgeon-quote {
+        margin-top: 60px;
+    }
+
+    .surgeon-meta {
+        margin-top: 60px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .fixed-menu {
+        top: 22px;
+        right: 22px;
+        font-size: 8px;
+    }
+
+    /* HERO */
+
+    .hero {
+        height: 125vh;
+        min-height: 760px;
+    }
+
+    .hero-nav {
+        top: 22px;
+        left: 22px;
+        right: 22px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .nav-name {
+        font-size: 7px;
+        letter-spacing: 0.24em;
+    }
+
+    .hero-content {
+        min-height: 650px;
+    }
+
+    .hero-label {
+        top: 23%;
+        left: 25px;
+        font-size: 7px;
+    }
+
+    .hero-title {
+        top: 31%;
+        left: 25px;
+        font-size: 20vw;
+        line-height: 0.76;
+    }
+
+        .hero-title span {
+            margin-left: 10vw;
+        }
+
+    .hero-image-wrapper {
+        width: 76vw;
+        height: 59vh;
+        min-height: 450px;
+        top: 57%;
+    }
+
+    .hero-image {
+        background-position: center 20%;
+    }
+
+    .hero-bottom {
+        left: 22px;
+        right: 22px;
+        bottom: 24px;
+        font-size: 6px;
+    }
+
+    /* INTRO */
+
+    .intro {
+        min-height: 110vh;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 25px 90px;
+    }
+
+    .intro-image {
+        width: 75%;
+        height: 55vh;
+        min-height: 420px;
+        margin-right: auto;
+    }
+
+    .intro-content {
+        width: 100%;
+        padding: 90px 0 0;
+    }
+
+    .intro-label {
+        margin-bottom: 40px;
+        font-size: 7px;
+    }
+
+    .intro h2 {
+        font-size: 19vw;
+        line-height: 0.76;
+    }
+
+        .intro h2 span {
+            margin-left: 9vw;
+            color: #ffffff;
+        }
+
+    .intro-description {
+        margin-top: 50px;
+        margin-left: 9vw;
+        max-width: 250px;
+        font-size: 9px;
+    }
+
+    .intro-number {
+        right: 0;
+        bottom: -30px;
+        font-size: 90px;
+    }
+
+    /* PROCEDURES */
+
+    .procedures {
+        min-height: 120vh;
+        padding: 110px 25px 100px;
+    }
+
+    .procedures-label {
+        margin-bottom: 40px;
+        font-size: 7px;
+    }
+
+    .procedures-heading h2 {
+        font-size: 19vw;
+        line-height: 0.76;
+    }
+
+        .procedures-heading h2 span {
+            margin-left: 8vw;
+            color: #ffffff;
+        }
+
+    .procedure-image {
+        top: 54%;
+        left: 50%;
+        width: 82vw;
+        height: 52vh;
+        min-height: 420px;
+        opacity: 0.18;
+    }
+
+    .procedures-list {
+        width: 100%;
+        margin-top: 120px;
+    }
+
+    .procedure-item {
+        grid-template-columns: 40px 1fr 25px;
+        padding: 25px 0;
+    }
+
+    .procedure-number {
+        font-size: 7px;
+    }
+
+    .procedure-main h3 {
+        font-size: 11vw;
+    }
+
+    .procedure-main p {
+        max-width: 230px;
+        font-size: 8px;
+    }
+
+    .procedure-arrow {
+        font-size: 16px;
+    }
+
+    .procedures-footer {
+        left: 25px;
+        right: 25px;
+        bottom: 30px;
+        font-size: 6px;
+    }
+
+    /* FEATURED WORK */
+
+    .featured-work {
+        min-height: auto;
+        padding: 110px 25px 90px;
+    }
+
+    .featured-heading {
+        max-width: 100%;
+    }
+
+    .featured-label {
+        margin-bottom: 40px;
+        font-size: 7px;
+    }
+
+    .featured-heading h2 {
+        font-size: 20vw;
+        line-height: 0.75;
+    }
+
+        .featured-heading h2 span {
+            margin-left: 8vw;
+            color: #ffffff;
+        }
+
+    .featured-items {
+        margin-top: 100px;
+    }
+
+    .featured-item {
+        min-height: 650px;
+        margin-bottom: 100px;
+    }
+
+    .featured-image {
+        left: 50%;
+        top: 46%;
+        width: 82vw;
+        height: 62vh;
+        min-height: 450px;
+        transform: translate(-50%, -50%);
+    }
+
+    .featured-content {
+        left: 0;
+        right: auto;
+        bottom: 20px;
+        text-align: left;
+    }
+
+        .featured-content h3 {
+            font-size: 15vw;
+        }
+
+    .featured-description {
+        max-width: 220px;
+        font-size: 8px;
+    }
+
+    /* BEFORE / AFTER */
+
+    .before-after {
+        min-height: auto;
+        padding: 110px 25px 90px;
+    }
+
+    .before-after-label {
+        margin-bottom: 40px;
+        font-size: 7px;
+    }
+
+    .before-after-title {
+        font-size: 20vw;
+        line-height: 0.75;
+    }
+
+        .before-after-title span {
+            margin-left: 8vw;
+            color: #ffffff;
+        }
+
+    .before-after-intro {
+        margin-left: 8vw;
+        margin-top: 45px;
+        max-width: 250px;
+        font-size: 9px;
+    }
+
+    .before-after-stage {
+        width: 100%;
+        height: 65vh;
+        min-height: 470px;
+        margin-top: 80px;
+    }
+
+    .before-after-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .before-after-before img {
+        width: 100vw;
+    }
+
+    .before-after-info {
+        width: 100%;
+        margin-top: 25px;
+        align-items: flex-start;
+    }
+
+        .before-after-info strong {
+            font-size: 21px;
+        }
+
+    .before-after-instruction {
+        display: none !important;
+    }
+
+    .before-after-selector {
+        width: 100%;
+        margin-top: 55px;
+    }
+
+        .before-after-selector button {
+            width: 50%;
+            padding: 18px 10px;
+            text-align: left;
+            font-size: 7px;
+        }
+
+            .before-after-selector button.active::after {
+                left: 10px;
+                right: 10px;
+            }
+
+    /* SURGEON */
+
+    .surgeon {
+        padding: 90px 25px;
+        gap: 50px;
+    }
+
+    .surgeon-image {
+        height: 60vh;
+        min-height: 420px;
+    }
+
+    .surgeon-content h2 {
+        font-size: 20vw;
+    }
+
+    .surgeon-quote {
+        margin-top: 50px;
+        font-size: 29px;
+    }
+
+    .surgeon-description {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .surgeon-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 50px;
+    }
+
+    /* TESTIMONIALS */
+
+    .testimonials {
+        min-height: auto;
+        padding: 100px 7vw 45px;
+    }
+
+    .testimonials-mark {
+        top: 70px;
+        right: -5vw;
+        font-size: 230px;
+    }
+
+    .testimonials-label {
+        margin-bottom: 25px;
+        font-size: 8px;
+    }
+
+    .testimonials-heading {
+        font-size: clamp(58px, 16vw, 95px);
+    }
+
+        .testimonials-heading span {
+            margin-left: 8vw;
+        }
+
+    .testimonials-main {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 80px 0 0;
+    }
+
+    .testimonials-number {
+        padding-top: 0;
+    }
+
+    .testimonials-quote h3 {
+        font-size: clamp(36px, 9vw, 58px);
+        line-height: 1.02;
+    }
+
+    .testimonials-details {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 45px;
+    }
+
+    .testimonial-procedure {
+        align-items: flex-start;
+    }
+
+    .testimonials-selector {
+        margin: 70px 0 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonial-selector {
+        padding-right: 10px;
+    }
+
+        .testimonial-selector strong {
+            font-size: 8px;
+        }
+
+        .testimonial-selector small {
+            font-size: 8px;
+        }
+
+    .testimonials-footer {
+        margin-top: 45px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 700px;
+    }
+
+    .hero-title {
+        font-size: 21vw;
+    }
+
+    .hero-image-wrapper {
+        width: 82vw;
+        height: 56vh;
+    }
+
+    .intro {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .intro-image {
+        width: 82%;
+        height: 48vh;
+        min-height: 360px;
+    }
+
+    .intro h2 {
+        font-size: 20vw;
+    }
+
+        .intro h2 span {
+            color: #ffffff;
+        }
+
+    .procedures {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .procedures-heading h2 span {
+        color: #ffffff;
+    }
+
+    .procedure-image {
+        width: 88vw;
+        height: 48vh;
+        opacity: 0.14;
+    }
+
+    .procedure-main h3 {
+        font-size: 12vw;
+    }
+
+    .featured-work {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .featured-heading h2 {
+        font-size: 21vw;
+    }
+
+        .featured-heading h2 span {
+            color: #ffffff;
+        }
+
+    .featured-item {
+        min-height: 580px;
+    }
+
+    .featured-image {
+        width: 88vw;
+        height: 54vh;
+        min-height: 400px;
+    }
+
+    .featured-content h3 {
+        font-size: 17vw;
+    }
+
+    .before-after {
+        padding: 80px 20px 70px;
+    }
+
+    .before-after-title {
+        font-size: 19vw;
+    }
+
+        .before-after-title span {
+            color: #ffffff;
+        }
+
+    .before-after-stage {
+        height: 58vh;
+        min-height: 400px;
+        margin-top: 65px;
+    }
+
+    .before-after-handle {
+        width: 48px;
+        height: 48px;
+        font-size: 9px;
+    }
+
+    .before-after-label-before,
+    .before-after-label-after {
+        top: 18px;
+        font-size: 7px;
+    }
+
+    .before-after-label-before {
+        left: 18px;
+    }
+
+    .before-after-label-after {
+        right: 18px;
+    }
+
+    .before-after-info strong {
+        font-size: 19px;
+    }
+
+    .before-after-selector button {
+        padding: 16px 7px;
+        font-size: 6px;
+    }
+
+    /* SURGEON */
+
+    .surgeon {
+        padding: 75px 20px;
+        gap: 45px;
+    }
+
+    .surgeon-image {
+        height: 52vh;
+        min-height: 360px;
+    }
+
+    .surgeon-content h2 {
+        font-size: 21vw;
+    }
+
+        .surgeon-content h2 span {
+            margin-left: 0.4em;
+        }
+
+    .surgeon-quote {
+        margin-top: 45px;
+        font-size: 27px;
+    }
+
+    .surgeon-description {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+    .surgeon-meta {
+        margin-top: 45px;
+    }
+
+    /* TESTIMONIALS */
+
+    .testimonials {
+        padding: 85px 6vw 35px;
+    }
+
+    .testimonials-mark {
+        top: 60px;
+        right: -8vw;
+        font-size: 190px;
+    }
+
+    .testimonials-heading {
+        font-size: 54px;
+    }
+
+    .testimonials-main {
+        margin-top: 65px;
+    }
+
+    .testimonials-quote h3 {
+        font-size: 35px;
+    }
+
+    .testimonials-details {
+        margin-top: 35px;
+    }
+
+    .testimonials-selector {
+        margin-top: 60px;
+        gap: 10px;
+    }
+
+    .testimonial-selector {
+        padding-right: 0;
+    }
+
+        .testimonial-selector > span {
+            font-size: 8px;
+        }
+
+        .testimonial-selector strong {
+            font-size: 7px;
+        }
+
+        .testimonial-selector small {
+            font-size: 7px;
+        }
+
+    .testimonials-footer {
+        margin-top: 40px;
+        font-size: 7px;
+    }
+}
